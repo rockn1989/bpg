@@ -1,7 +1,9 @@
 {% include "../includes/head.html" %}
 
 {% include "../includes/header.html" %}
+{% if main == true %}
 {% include "../includes/breadcrumbs.html" %}
+{% endif %}
 <body>
 {% block content %}{% endblock %}
 

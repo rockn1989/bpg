@@ -2,6 +2,25 @@
 
 $(function() {
 
+	// Декстопная форма в шапке
+
+	var $searchBtn = $('a.search'),
+		$searchForm = $('.search-form');
+
+	$searchBtn.on('click', function (e) {
+		e.preventDefault();
+		if(!$searchForm.hasClass('show')) {
+			$(this).parent('div.search').addClass('show')
+			$searchForm
+				.addClass('show')
+				.find('input[type="text"]')
+				.focus();
+		} else {
+			$(this).parent('div.search').removeClass('show');
+			$searchForm.removeClass('show')
+		}
+	});
+
 
 	// Показывать форму на мобильных устройствах
 
