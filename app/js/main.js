@@ -3,44 +3,47 @@
 $(function() {
 
 	var $preloadElements = $('.preload');
+
 	$.each($preloadElements, function (i, el) {
-		$(el).removeClass('preload')
+		$(el).removeClass('preload');
 	})
 
 	// Декстопная форма в шапке
 
-	var $searchBtn = $('a.search'),
+	var $searchBtn = $('a.search__link'),
 		$searchForm = $('.search-form');
 
 	$searchBtn.on('click', function (e) {
 		e.preventDefault();
+		var timer;
 		if(!$searchForm.hasClass('show')) {
-			$(this).parent('div.search').addClass('show')
+			$(this).parent('div.search').addClass('show');
 			$searchForm
 				.addClass('show')
 				.find('input[type="text"]')
 				.focus();
+
+			timer = setTimeout(function () {
+				$(document).on('click keyup', hiddenSearchForm);
+			}, 100)
 		} else {
-			$(this).parent('div.search').removeClass('show');
-			$searchForm.removeClass('show');
-			//$(document).on('click keyup', hiddenSearchForm);
+			clearInterval(timer);
 		}
 	});
 
-/*	function hiddenSearchForm (e) {
+	function hiddenSearchForm (e) {
 		var form = document.querySelector('.search-form'),
 			input = document.querySelector('.search-form input'),
 				btn = document.querySelector('js__search-form');
 
 		if((e.which == 27) || (e.target != input && e.target != btn) && $(form).hasClass('show')) {
-			$(form).fadeOut('350', function() {
-				$(input).val('');
-				$(this).removeClass('show');
-				$('.header__top-contacts-links').fadeIn('350');
-				$(document).unbind('click keyup', hiddenSearchForm);
-			});
+			console.log(123)
+			$(input).val('');
+			$(form).removeClass('show');
+			$('div.search').removeClass('show');
+			$(document).unbind('click keyup', hiddenSearchForm);
 		};
-	};*/
+	};
 
 
 	// Показывать форму на мобильных устройствах
@@ -54,7 +57,7 @@ $(function() {
 
 
 	// Главная навигация
-	
+
 	$('.main-nav').on('mouseover','.nav__item', function () {
 		$.each($('.main-nav .nav__item'), function (i, el) {
 			$(el).removeClass('hover')

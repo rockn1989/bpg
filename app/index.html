@@ -23,7 +23,6 @@
 	<![endif]-->
 </head>
 
-
 <header class="header">
 		<div class="header-desktop">
 			<div class="uk-container">
@@ -51,16 +50,16 @@
 							<span class="icon-flag">Москва, Архангельский пер., д.3, стр.1</span>
 						</div>
 						<div class="search">
-							<a href="" class="search icon-search">Поиск</a>
+							<a href="" class="search__link icon-search">Поиск</a>
 							<form action="" class="search-form">
 								<input type="text">
-								<button type="submit">Найти</button>
+								<button type="submit" class="js__search-form">Найти</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-			<nav class="main-nav nav">
+			<nav class="main-nav nav" data-uk-sticky="{top: -120}">
 				<ul class="nav__list">
 					<li class="nav__item">
 						<a href="#" class="nav__link">О Компании</a>
@@ -101,9 +100,8 @@
 		</div>
 		<div class="header-mobile"></div>
 </header>
-
-
 <body>
+
 	<div class="service-slider preload">
 		<div class="uk-container">
 			<div class="slider">
@@ -349,6 +347,7 @@
 
 
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/js/uikit.min.js" defer></script>
@@ -356,7 +355,6 @@
 <script src="libs/svg4everybody.min.js" defer></script>
 <script src="js/sliders.js" defer></script>
 <script src="js/main.js" defer></script>
-
 
 </body>
 </html>
