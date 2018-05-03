@@ -2,6 +2,11 @@
 
 $(function() {
 
+	var $preloadElements = $('.preload');
+	$.each($preloadElements, function (i, el) {
+		$(el).removeClass('preload')
+	})
+
 	// Декстопная форма в шапке
 
 	var $searchBtn = $('a.search'),
@@ -17,9 +22,25 @@ $(function() {
 				.focus();
 		} else {
 			$(this).parent('div.search').removeClass('show');
-			$searchForm.removeClass('show')
+			$searchForm.removeClass('show');
+			//$(document).on('click keyup', hiddenSearchForm);
 		}
 	});
+
+/*	function hiddenSearchForm (e) {
+		var form = document.querySelector('.search-form'),
+			input = document.querySelector('.search-form input'),
+				btn = document.querySelector('js__search-form');
+
+		if((e.which == 27) || (e.target != input && e.target != btn) && $(form).hasClass('show')) {
+			$(form).fadeOut('350', function() {
+				$(input).val('');
+				$(this).removeClass('show');
+				$('.header__top-contacts-links').fadeIn('350');
+				$(document).unbind('click keyup', hiddenSearchForm);
+			});
+		};
+	};*/
 
 
 	// Показывать форму на мобильных устройствах
@@ -31,6 +52,21 @@ $(function() {
 		$mobileForm.slideToggle('350').find('input').focus();
 	})
 
+
+	// Главная навигация
+	
+	$('.main-nav').on('mouseover','.nav__item', function () {
+		$.each($('.main-nav .nav__item'), function (i, el) {
+			$(el).removeClass('hover')
+		});
+		$(this).addClass('hover')
+	});
+
+	$('.main-nav').on('mouseleave', function () {
+		$.each($('.main-nav .nav__item'), function (i, el) {
+			$(el).removeClass('hover')
+		});
+	});
 
 	// Маска формы
 

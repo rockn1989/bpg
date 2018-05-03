@@ -1,1 +1,143 @@
 /* SLIDERS */
+
+/* SERVICE SLIDER */
+
+.service-slider {
+	position: relative;
+	margin-bottom: 20px;
+	&.preload {
+		height: 320px;
+	}
+	.slider {
+		.slick-slide {
+			margin: 0 10px;
+		}
+		.slick-list {
+			margin: 0 -10px;
+		}
+	}
+}
+
+.slider {
+	.slide-prev,
+	.slide-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		z-index: 105;
+		&:hover {
+			i {
+				&:before {
+					color: @darkBlue;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.slide-prev {
+		left: -35px;
+	}
+	.slide-next {
+		right: -35px;
+	}
+}
+
+.slider__title {
+	position: absolute;
+	max-width: 16%;
+	color: #2c2b51;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 24px;
+	letter-spacing: 1.2px;
+	z-index: 130;
+}
+
+
+/* CLIENTS SLIDER */
+
+.clients-slider {
+	position: relative;
+	.slider {
+		margin-top: 30px;
+		padding: 40px 14%;
+		.slide {
+			height: 80px;
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+		}
+		.slide-prev {
+			left: 0;
+		}
+		.slide-next {
+			right: 0;
+		}
+	}
+	img {
+		display: inline;
+		max-height: 100%;
+	}
+}
+
+
+/* RECOMMENDS SLIDER */
+
+.recommend-slider {
+	position: relative;
+	margin-bottom: 60px;
+	.slider {
+		position: relative;
+		margin-top: 30px;
+		padding: 0 10%;
+		.slick-slide {
+			margin: 0 10px;
+		}
+		.slick-list {
+			margin: 0 -10px;
+		}
+		.slide__inner {
+			padding: 26px 28px;
+			background-color: #f8f8f8;
+		}
+		.slide-prev {
+			left: 0;
+		}
+		.slide-next {
+			right: 0;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 30%;
+			height: 100%;
+			background-image: linear-gradient(to right, rgba(252, 252, 252, 0) 0%, #ffffff 100%);
+			z-index: 100;
+		}
+	}
+}
+
+
+.preload {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #ffffff url('../img/ajax-loader.gif') center no-repeat;
+	}
+	* {
+		opacity: 0;
+	}
+}

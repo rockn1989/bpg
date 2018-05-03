@@ -1,1 +1,120 @@
 /* PAGE FOOTER */
+
+.footer {
+	padding: 75px 0;
+	.logo {
+		margin-top: -25px;
+		display: block;
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	&__list-item {
+		a {
+			margin-bottom: 20px;
+			display: inline-block;
+			vertical-align: top;
+			color: #2c2b51;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 17px;
+			opacity: .5;
+		}
+	}
+	&__contacts {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		font-size: 0;
+		.tel {
+			position: relative;
+			margin-bottom: 20px;
+			padding-left: 25px;
+			display: block;
+			color: #2c2b51;
+			font-size: 13px;
+			font-weight: 500;
+			font-family: @mainFont !important;
+			&:before {
+				position: absolute;
+				top: 1px;
+				left: 0;
+				font-family: 'icomoon' !important;
+			}
+		}
+		.callback {
+			padding-left: 25px;
+			color: #2c2b51;
+			opacity: .5;
+			font-size: 14px;
+			font-weight: 500;
+		}
+	}
+	&__address {
+		margin-top: 35px;
+		span.icon-flag {
+			position: relative;
+			display: block;
+			&:before {
+				position: absolute;
+				top: 3px;
+				left: 0;
+				font-family: 'icomoon' !important;
+			}
+		}
+		span.text {
+			padding-left: 25px;
+			display: inline-block;
+			max-width: 60%;
+			color: #2c2b51;
+			opacity: .5;
+			font-size: 14px;
+			font-weight: 500;
+			font-family: @mainFont !important;
+		}
+	}
+	&__soc-icons {
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
+		font-size: 0;
+		a {
+			&:before {
+				font-size: 20px;
+				transition: color .3s ease;
+			}
+			&:hover {
+				text-decoration: none;
+				&.icon-whatsapp {
+					&:before {
+						color: #4fc85d;
+					}
+				}
+				&.icon-telegram {
+					&:before {
+						color: #2598d2;
+					}
+				}
+				&.icon-skype {
+					&:before {
+						color: #00b0e1;
+					}
+				}
+				&.icon-whatsapp {
+					&:before {
+						color: #4fc85d;
+					}
+				}
+			}
+
+		}
+	}
+	&__soc-icons-wrapper {
+		margin-top: -3px;
+		padding-left: 15%;
+		display: flex;
+		justify-content: space-between;		
+	}
+}
