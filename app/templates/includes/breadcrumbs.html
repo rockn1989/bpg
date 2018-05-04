@@ -1,4 +1,6 @@
-<ul class="breadcrumbs">
+<div class="breadcrumbs-wrapper">
+	<div class="uk-container">
+		<ul class="breadcrumbs">
 	{% for value in bread %}
 	{% if loop.last == false %}
 	<li><a href="">{{value}}</a></li>
@@ -7,3 +9,5 @@
 		{% endif %}
 {% endfor %}
 </ul>
+	</div>
+</div>

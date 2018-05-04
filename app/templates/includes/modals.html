@@ -1,3 +1,67 @@
 {% block content %}
 
+<div id="callback-modal" class="uk-modal default-modal">
+	<div class="uk-modal-dialog">
+		<div class="uk-modal-header">
+			<div class="title">Заказать звонок
+			</div>
+			<a class="uk-modal-close uk-close"></a>
+		</div>
+		<div class="uk-modal-body">
+			<form action="" class="default-form">
+				<fieldset>
+					<input type="text" id="callback-name" placeholder="Имя">
+				</fieldset>
+				<fieldset>
+					<input type="text" id="callback-tel" name="tel" class="js__input-phone" placeholder="Телефон" required>
+				</fieldset>
+				<fieldset>
+					<textarea name="message" id="callback-message" placeholder="Комментарий"></textarea>
+					<div class="required-fileds">
+						<sup>*</sup> — поля обязательные для заполнения
+					</div>
+				</fieldset>
+				<div class="form-politics">
+					Нажимая на кнопку отправить, я даю согласие на обработку <a href="">Персональных данных</a>
+				</div>
+				<button type="submit" class="btn modal-btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<div id="service-modal" class="uk-modal default-modal">
+	<div class="uk-modal-dialog">
+		<div class="uk-modal-header">
+			<div class="title">Заказать услугу 
+				<span>Оценка НМА, интеллект. собственности</span>
+			</div>
+			<a class="uk-modal-close uk-close"></a>
+		</div>
+		<div class="uk-modal-body">
+			<form action="" class="default-form">
+				<fieldset>
+					<input type="text" id="service-name" placeholder="Имя">
+				</fieldset>
+				<fieldset>
+					<input type="email" id="service-email" name="email" placeholder="Email*" required>
+				</fieldset>
+				<fieldset>
+					<input type="text" id="service-tel" name="tel" class="js__input-phone" placeholder="Телефон">
+				</fieldset>
+				<fieldset>
+					<textarea name="message" id="service-message" placeholder="Комментарий"></textarea>
+					<div class="required-fileds">
+						<sup>*</sup> — поля обязательные для заполнения
+					</div>
+				</fieldset>
+				<div class="form-politics">
+					Нажимая на кнопку отправить, я даю согласие на обработку <a href="">Персональных данных</a>
+				</div>
+				<button type="submit" class="btn modal-btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
 {% endblock %}

@@ -1,13 +1,13 @@
 {% extends "layouts/default.html" %}
 {% set title="Главная" %}
-{% set main = false %}
+{% set main = true %}
 {% block content %}
 	<div class="service-slider preload">
 		<div class="uk-container">
 			<div class="slider">
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-1.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-1.png')">
 							Оценка <span>и экспертиза</span>
 						</div>
 						<ul class="card__list">
@@ -22,7 +22,7 @@
 				</div>
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-2.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-2.png')">
 							Маркетинг <span>и инвестиционный консалтинг</span>
 						</div>
 						<ul class="card__list">
@@ -37,7 +37,7 @@
 				</div>
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-3.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-3.png')">
 							Юридические <span>услуги</span>
 						</div>
 						<ul class="card__list">
@@ -52,7 +52,7 @@
 				</div>
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-2.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-2.png')">
 							Маркетинг2 <span>и инвестиционный консалтинг</span>
 						</div>
 						<ul class="card__list">
@@ -84,19 +84,29 @@
 			<div class="slider__title">Среди наших клиентов</div>
 			<div class="slider">
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-2-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-2-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-3-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-3-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-4-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-4-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -145,48 +155,6 @@
 		</div>
 	</div>
 	
-	<div class="info-blocks">
-		<div class="uk-container">
-			<div class="uk-grid">
-				<div class="uk-width-medium-6-10">
-					<div class="main-articles">
-						<div class="main-articles__header">
-							<div class="title">Статьи</div>
-							<a href="" class="all">Все статьи</a>
-						</div>
-						<div class="item">
-							<div class="date">20 февраля 2018</div>
-							<div class="subtitle">
-								<a href="">Особенности оценки машин и оборудования</a>
-							</div>
-							<div class="text">
-								Согласно законодательству (ФЗ «Об оценочной деятельности»), кадастровая оценка осуществляется в соответствие с решениями исполнительных органов либо в тех случаях, когда законодательные нормы о проведении оценочных мероприятий устанавливаются законодательством государственного субъекта. Процедура проводится не реже, чем один раз в пять лет. 
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="uk-width-medium-4-10">
-					<div class="main-news">
-						<div class="main-news__header">
-							<div class="title">Новости</div>
-							<a href="" class="all">Все новости</a>
-						</div>
-						<div class="item">
-							<div class="date">14 января 2018</div>
-							<div class="subtitle">
-								<a href="">Кадастровая оценка земли: вопросы и ответы</a>
-							</div>
-						</div>
-						<div class="news__item">
-							<div class="date">18 июля 2017</div>
-							<div class="subtitle">
-								<a href="">В каких ситуациях требуется оценка земельного участка?</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	{% include "includes/info-blocks.html" %}
 
 {% endblock %}

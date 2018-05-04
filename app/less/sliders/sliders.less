@@ -59,16 +59,19 @@
 
 .clients-slider {
 	position: relative;
+	margin-bottom: 30px;
 	.slider {
 		margin-top: 30px;
 		padding: 40px 14%;
 		.slide {
-			height: 80px;
-			&:after {
-				content: '';
-				display: inline-block;
-				vertical-align: middle;
-				height: 100%;
+			&__img-wrapper {
+				height: 80px;
+				&:before {
+					content: '';
+					display: inline-block;
+					vertical-align: middle;
+					height: 100%;
+				}
 			}
 		}
 		.slide-prev {

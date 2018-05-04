@@ -39,7 +39,7 @@
 								<a href="tel:+79031303851" class="tel">+7 (903) 130-38-51</a>
 								<a href="" class="soc-links icon-whatsapp"></a>
 								<a href="" class="soc-links icon-telegram"></a>
-								<a href="" class="soc-links icon-whatsapp"></a>
+								<a href="" class="soc-links icon-viber-png"></a>
 							</div>
 							<a href="" class="soc-links icon-skype"></a>
 						</div>
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</div>
-			<nav class="main-nav nav" data-uk-sticky="{top: -120}">
+			<nav class="main-nav nav" data-uk-sticky="{top: -120, getWidthFrom: '.header'}">
 				<ul class="nav__list">
 					<li class="nav__item">
 						<a href="#" class="nav__link">О Компании</a>
@@ -101,13 +101,12 @@
 		<div class="header-mobile"></div>
 </header>
 <body>
-
 	<div class="service-slider preload">
 		<div class="uk-container">
 			<div class="slider">
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-1.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-1.png')">
 							Оценка <span>и экспертиза</span>
 						</div>
 						<ul class="card__list">
@@ -122,7 +121,7 @@
 				</div>
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-2.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-2.png')">
 							Маркетинг <span>и инвестиционный консалтинг</span>
 						</div>
 						<ul class="card__list">
@@ -137,7 +136,7 @@
 				</div>
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-3.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-3.png')">
 							Юридические <span>услуги</span>
 						</div>
 						<ul class="card__list">
@@ -152,7 +151,7 @@
 				</div>
 				<div class="slide">
 					<div class="services__card card">
-						<div class="card__title" style="background-image: url('../img/icon-png/service-icon-2.png')">
+						<div class="card__title" style="background-image: url('img/icon-png/service-icon-2.png')">
 							Маркетинг2 <span>и инвестиционный консалтинг</span>
 						</div>
 						<ul class="card__list">
@@ -184,19 +183,29 @@
 			<div class="slider__title">Среди наших клиентов</div>
 			<div class="slider">
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-2-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-2-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-3-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-3-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-4-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-4-150x60.png" alt="">
+					</div>
 				</div>
 				<div class="slide">
-					<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					<div class="slide__img-wrapper">
+						<img src="img/sliders-img/clients-img-1-150x60.png" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -287,8 +296,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
+</div>
 
 
 <footer class="footer">
@@ -326,10 +334,10 @@
 				</div>
 				<div class="footer__soc-icons">
 					<div class="footer__soc-icons-wrapper">
-						<a href="" class="soc-links icon-whatsapp"></a>
-						<a href="" class="soc-links icon-telegram"></a>
-						<a href="" class="soc-links icon-skype"></a>
-						<a href="" class="soc-links icon-whatsapp"></a>
+						<a href="https://vk.com/business__partner" class="soc-links icon-vk"></a>
+						<a href="https://twitter.com/biznesspartner" class="soc-links icon-twitter"></a>
+						<a href="https://www.facebook.com/pg/BusinessPartner-%D0%9E%D1%86%D0%B5%D0%BD%D0%BA%D0%B0-1%D0%A1-%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-239012946127630/about/" class="soc-links icon-facebook"></a>
+						<a href="https://bp-g.livejournal.com/" class="soc-links icon-livejournal"></a>
 					</div>
 				</div>
 				<div class="footer__address">
@@ -344,12 +352,74 @@
 
 
 
+<div id="callback-modal" class="uk-modal default-modal">
+	<div class="uk-modal-dialog">
+		<div class="uk-modal-header">
+			<div class="title">Заказать звонок
+			</div>
+			<a class="uk-modal-close uk-close"></a>
+		</div>
+		<div class="uk-modal-body">
+			<form action="" class="default-form">
+				<fieldset>
+					<input type="text" id="callback-name" placeholder="Имя">
+				</fieldset>
+				<fieldset>
+					<input type="text" id="callback-tel" name="tel" class="js__input-phone" placeholder="Телефон" required>
+				</fieldset>
+				<fieldset>
+					<textarea name="message" id="callback-message" placeholder="Комментарий"></textarea>
+					<div class="required-fileds">
+						<sup>*</sup> — поля обязательные для заполнения
+					</div>
+				</fieldset>
+				<div class="form-politics">
+					Нажимая на кнопку отправить, я даю согласие на обработку <a href="">Персональных данных</a>
+				</div>
+				<button type="submit" class="btn modal-btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
 
 
-
+<div id="service-modal" class="uk-modal default-modal">
+	<div class="uk-modal-dialog">
+		<div class="uk-modal-header">
+			<div class="title">Заказать услугу 
+				<span>Оценка НМА, интеллект. собственности</span>
+			</div>
+			<a class="uk-modal-close uk-close"></a>
+		</div>
+		<div class="uk-modal-body">
+			<form action="" class="default-form">
+				<fieldset>
+					<input type="text" id="service-name" placeholder="Имя">
+				</fieldset>
+				<fieldset>
+					<input type="email" id="service-email" name="email" placeholder="Email*" required>
+				</fieldset>
+				<fieldset>
+					<input type="text" id="service-tel" name="tel" class="js__input-phone" placeholder="Телефон">
+				</fieldset>
+				<fieldset>
+					<textarea name="message" id="service-message" placeholder="Комментарий"></textarea>
+					<div class="required-fileds">
+						<sup>*</sup> — поля обязательные для заполнения
+					</div>
+				</fieldset>
+				<div class="form-politics">
+					Нажимая на кнопку отправить, я даю согласие на обработку <a href="">Персональных данных</a>
+				</div>
+				<button type="submit" class="btn modal-btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
+<script src="libs/jquery.validate.min.js" defer></script>
 <script src="libs/js/uikit.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
 <script src="libs/svg4everybody.min.js" defer></script>

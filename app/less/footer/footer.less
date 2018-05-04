@@ -82,33 +82,35 @@
 		font-size: 0;
 		a {
 			&:before {
-				font-size: 20px;
+				color:  #2c2b51;
 				transition: color .3s ease;
 			}
 			&:hover {
 				text-decoration: none;
-				&.icon-whatsapp {
-					&:before {
-						color: #4fc85d;
-					}
-				}
-				&.icon-telegram {
-					&:before {
-						color: #2598d2;
-					}
-				}
-				&.icon-skype {
-					&:before {
-						color: #00b0e1;
-					}
-				}
-				&.icon-whatsapp {
-					&:before {
-						color: #4fc85d;
-					}
+				&:before {
+					color: @lightBlue;
 				}
 			}
-
+			&.icon-vk {
+				&:before {
+					font-size: 18px;
+				}
+			}
+			&.icon-twitter {
+				&:before {
+					font-size: 16px;
+				}
+			}
+			&.icon-facebook {
+				&:before {
+					font-size: 16px;
+				}
+			}
+			&.icon-livejournal {
+				&:before {
+					font-size: 16px;
+				}
+			}
 		}
 	}
 	&__soc-icons-wrapper {

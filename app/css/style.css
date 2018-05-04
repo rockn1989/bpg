@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon/fonts/icomoon.eot?4pkjag');
-  src: url('../fonts/icomoon/fonts/icomoon.eot?4pkjag#iefix') format('embedded-opentype'), url('../fonts/icomoon/fonts/icomoon.ttf?4pkjag') format('truetype'), url('../fonts/icomoon/fonts/icomoon.woff?4pkjag') format('woff'), url('../fonts/icomoon/fonts/icomoon.svg?4pkjag#icomoon') format('svg');
+  src: url('../fonts/icomoon/fonts/icomoon.eot?xhyd5y');
+  src: url('../fonts/icomoon/fonts/icomoon.eot?xhyd5y#iefix') format('embedded-opentype'), url('../fonts/icomoon/fonts/icomoon.ttf?xhyd5y') format('truetype'), url('../fonts/icomoon/fonts/icomoon.woff?xhyd5y') format('woff'), url('../fonts/icomoon/fonts/icomoon.svg?xhyd5y#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -78,13 +78,54 @@
   color: #2b2b51;
 }
 
-.icon-viber:before {
+.icon-viber .path1:before {
   content: "\e908";
+  color: #2b2b51;
+}
+
+.icon-viber .path2:before {
+  content: "\e909";
+  margin-left: -0.96777344em;
+  color: #2b2b51;
+}
+
+.icon-viber .path3:before {
+  content: "\e90a";
+  margin-left: -0.96777344em;
+  color: #ffffff;
+}
+
+.icon-viber .path4:before {
+  content: "\e90b";
+  margin-left: -0.96777344em;
+  color: #ffffff;
+}
+
+.icon-viber .path5:before {
+  content: "\e90c";
+  margin-left: -0.96777344em;
+  color: #ffffff;
 }
 
 .icon-whatsapp:before {
   content: "\e90d";
   color: #2b2b51;
+}
+
+.icon-vk:before {
+  content: "\e90e";
+}
+
+.icon-twitter:before {
+  content: "\e90f";
+}
+
+.icon-facebook:before {
+  content: "\e910";
+}
+
+.icon-livejournal:before {
+  content: "\e911";
 }
 
 body,
@@ -164,11 +205,16 @@ svg {
   -webkit-border-radius: 32px;
   border-radius: 32px;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s, color 0.3s ease;
+  -o-transition: background-color 0.3s, color 0.3s ease;
+  -moz-transition: background-color 0.3s, color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s ease;
 }
 
 .btn:hover {
   color: #ffffff;
   text-decoration: none;
+  background-color: #2c2b51;
 }
 
 .btn.btn--white {
@@ -306,6 +352,14 @@ svg {
 
 .contacts a:hover.icon-whatsapp:before {
   color: #4fc85d;
+}
+
+.contacts a.icon-viber-png {
+  width: 20px;
+  height: 20px;
+  background: url('../img/icon-png/viber.png') center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 .callback a {
@@ -917,7 +971,7 @@ svg {
 }
 
 .footer__soc-icons a:before {
-  font-size: 20px;
+  color: #2c2b51;
   -webkit-transition: color .3s ease;
   -o-transition: color .3s ease;
   -moz-transition: color .3s ease;
@@ -928,20 +982,24 @@ svg {
   text-decoration: none;
 }
 
-.footer__soc-icons a:hover.icon-whatsapp:before {
-  color: #4fc85d;
+.footer__soc-icons a:hover:before {
+  color: #0089ed;
 }
 
-.footer__soc-icons a:hover.icon-telegram:before {
-  color: #2598d2;
+.footer__soc-icons a.icon-vk:before {
+  font-size: 18px;
 }
 
-.footer__soc-icons a:hover.icon-skype:before {
-  color: #00b0e1;
+.footer__soc-icons a.icon-twitter:before {
+  font-size: 16px;
 }
 
-.footer__soc-icons a:hover.icon-whatsapp:before {
-  color: #4fc85d;
+.footer__soc-icons a.icon-facebook:before {
+  font-size: 16px;
+}
+
+.footer__soc-icons a.icon-livejournal:before {
+  font-size: 16px;
 }
 
 .footer__soc-icons-wrapper {
@@ -1021,6 +1079,7 @@ svg {
 
 .clients-slider {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .clients-slider .slider {
@@ -1028,11 +1087,11 @@ svg {
   padding: 40px 14%;
 }
 
-.clients-slider .slider .slide {
+.clients-slider .slider .slide__img-wrapper {
   height: 80px;
 }
 
-.clients-slider .slider .slide:after {
+.clients-slider .slider .slide__img-wrapper:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -1122,6 +1181,153 @@ svg {
 }
 
 /* MODALS WINDOW */
+
+/* CALLBACK MODAL */
+
+.default-modal .uk-modal-dialog {
+  position: relative;
+  padding: 58px 5.8%;
+  width: auto;
+  max-width: 635px;
+  background: url('../img/service-bg.png') 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-border-radius: 22px;
+  border-radius: 22px;
+}
+
+.default-modal .uk-modal-header {
+  margin-bottom: 40px;
+}
+
+.default-modal .uk-modal-header .title {
+  color: #2c2b51;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.default-modal .uk-modal-header .title span {
+  display: block;
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.default-modal .uk-modal-header a.uk-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-weight: 400;
+  width: auto;
+  line-height: 1;
+  opacity: 1;
+}
+
+.default-modal .uk-modal-header a.uk-close:after {
+  content: '✖';
+  font-family: none;
+  font-size: 35px;
+  line-height: 1;
+  color: #ffffff;
+  opacity: 1;
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.default-modal .uk-modal-header a.uk-close:hover:after {
+  color: #0089ed;
+}
+
+.default-modal .uk-modal-body fieldset {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+}
+
+.default-modal .uk-modal-body input,
+.default-modal .uk-modal-body textarea {
+  padding: 0 5%;
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  background-color: #ffffff;
+  border: none;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 24px 29px -20px rgba(43, 43, 81, 0.07);
+  box-shadow: 0 24px 29px -20px rgba(43, 43, 81, 0.07);
+  outline: none;
+}
+
+.default-modal .uk-modal-body ::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .5;
+}
+
+.default-modal .uk-modal-body :-moz-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .5;
+}
+
+.default-modal .uk-modal-body ::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .5;
+}
+
+.default-modal .uk-modal-body :-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .5;
+}
+
+.default-modal .uk-modal-body ::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .5;
+}
+
+.default-modal .uk-modal-body ::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .5;
+}
+
+.default-modal .uk-modal-body textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.default-modal .uk-modal-body label.error {
+  margin-top: 4px;
+  display: block;
+  color: red;
+}
+
+.default-modal .uk-modal-body .required-fileds {
+  margin: 20px 0 0;
+  color: #2c2b51;
+  opacity: .5;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.default-modal .form-politics {
+  margin: 10px 0 30px;
+  color: #2c2b51;
+  opacity: .5;
+  font-size: 14px;
+  font-weight: 500;
+}
 
 /* FORMS */
 
