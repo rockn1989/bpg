@@ -1,10 +1,11 @@
 {% include "../includes/head.html" %}
 
+<body>
 {% include "../includes/header.html" %}
 {% if main == false %}
-{% include "../includes/breadcrumbs.html" %}
+	{% include "../includes/breadcrumbs.html" %}
 {% endif %}
-<body>
+
 {% block content %}{% endblock %}
 
 {% include "../includes/footer.html" %}

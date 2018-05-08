@@ -89,6 +89,7 @@ h2, .title-h2 {
 	color: @darkBlue;
 }
 
+/* BREADCRUMBS */
 
 .breadcrumbs {
 	margin: 0;
@@ -124,6 +125,7 @@ h2, .title-h2 {
 	}
 }
 
+/* TABS */
 
 .uk-tab {
 	border: none;
@@ -173,4 +175,57 @@ h2, .title-h2 {
 	padding-bottom: 8px;
 	background: transparent;
 	border: none;
+}
+
+
+/* PAGINATION */
+
+.uk-pagination-wrapper {
+	padding: 45px 0;
+}
+
+.uk-pagination {
+	max-width: 835px;
+	margin: 0 auto;
+	li {
+		margin-right: 4%;
+		a,span {
+			width: 52px;
+			height: 52px;
+			line-height: 52px;
+			color: @darkBlue;
+			border-radius: 50%;
+			background-color: transparent;
+			font-size: 18px;
+			font-weight: 500;
+		}
+		&.uk-active {
+			span {
+				color: #ffffff;
+				background-color: @lightBlue;
+			}
+		}
+		&:nth-child(n+2) {
+			margin-left: 0;
+		}
+	}
+	.uk-pagination-prev {
+		float: left;
+	}
+	.uk-pagination-next {
+		float: right;
+	}
+	.uk-pagination-prev,
+	.uk-pagination-next {
+		margin-right: 0;
+		a {
+			padding: 0;
+			width: auto;
+			max-width: auto;
+			&:hover {
+				background: transparent;
+				color: @lightBlue;
+			}
+		}
+	}
 }

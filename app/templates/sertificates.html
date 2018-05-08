@@ -1,0 +1,33 @@
+{% extends "layouts/default.html" %}
+{% set title="Сертификаты" %}
+{% set bread = ["Главная", "О Компании", "Сертификаты"] %}
+{% set main = false %}
+{% block content %}
+	<div class="content">
+		<div class="sertificates">
+			<div class="uk-container">
+				<div class="title-h1">Сертификаты</div>
+				<div class="sertificates__list">
+					<div class="uk-container uk-container--medium">
+				{% for i in 1..10 %}
+					<div class="sertificates__item">
+							<div class="sertificates__img">
+								<a href="img/sertificate-{{i}}.png" data-uk-lightbox="{group: 'sert-group'}">
+									<img src="img/sertificate-{{i}}.png" alt="">
+								</a>
+							</div>
+							<div class="sertificates__subtitle">
+								Полис №ГС4К-ОЦСТ/001853-11 страхования ответственности оценщиков.
+							</div>
+						</div>
+				{% endfor %}
+					</div>
+				</div>
+				
+			</div>
+			{% include "includes/pagination.html" %}
+		</div>
+		{% include "includes/recommend-slider.html" %}
+		{% include "includes/info-blocks.html" %}
+	</div>
+{% endblock %}

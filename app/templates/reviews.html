@@ -1,0 +1,69 @@
+{% extends "layouts/default.html" %}
+{% set title="Отзывы" %}
+{% set bread = ["Главная", "Отзывы"] %}
+{% set main = false %}
+{% block content %}
+	<div class="content">
+		<div class="reviews">
+			<div class="uk-container">
+				<div class="title-h1">Отзывы</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-2-3">
+						<div class="reviews-list">
+							<div class="review">
+								<div class="review__text">
+									Добрый день. Хочу оставить положительный отзыв о  "БинесПартнер-групп". Я обратилась в компанию по вопросу независимой оценки ущерба автомобиля после ДТП. Получила оперативную информацию по всем интересующим меня вопросам... 
+								</div>
+								<div class="review__info">
+									<div class="review__date">07 декабря 2016</div>
+									<div class="review__author">Сергей Михайлович</div>
+								</div>
+							</div>
+			
+							<div class="review">
+								<div class="review__text">
+									Добрый день. Хочу оставить положительный отзыв о  "БинесПартнер-групп". Я обратилась в компанию по вопросу независимой оценки ущерба автомобиля после ДТП. Получила оперативную информацию по всем интересующим меня вопросам... 
+								</div>
+								<div class="review__info">
+									<div class="review__date">24 марта 2016</div>
+									<div class="review__author">Алексей</div>
+								</div>
+							</div>
+			
+							<div class="review">
+								<div class="review__text">
+									Добрый день. Хочу оставить положительный отзыв о  "БинесПартнер-групп". Я обратилась в компанию по вопросу независимой оценки ущерба автомобиля после ДТП. Получила оперативную информацию по всем интересующим меня вопросам... 
+								</div>
+								<div class="review__info">
+									<div class="review__date">21 марта 2016</div>
+									<div class="review__author">И.Губанов</div>
+								</div>
+							</div>
+			
+							<div class="review">
+								<div class="review__text">
+									Добрый день. Хочу оставить положительный отзыв о  "БинесПартнер-групп". Я обратилась в компанию по вопросу независимой оценки ущерба автомобиля после ДТП. Получила оперативную информацию по всем интересующим меня вопросам... 
+								</div>
+								<div class="review__info">
+									<div class="review__date">21 апреля 2013</div>
+									<div class="review__author">Анна_723</div>
+								</div>
+							</div>
+						</div>
+						{% include "includes/pagination.html" %}
+					</div>
+					<div class="uk-width-medium-1-3">
+						<div class="feedback-block">
+							<div class="feedback-block__text">
+								Здесь Вы можете оставить свое впечатление о сотрудничестве с нашей компанией, а также пожелания по улучшению нашей работы.
+							</div>
+							<a href="#feedback-modal" class="btn btn--white" data-uk-modal>Оставить отзыв</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% include "includes/recommend-slider.html" %}
+		{% include "includes/info-blocks.html" %}
+	</div>
+{% endblock %}
