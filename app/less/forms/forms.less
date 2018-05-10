@@ -31,3 +31,35 @@
 		display: block;
 	}
 }
+
+
+.comments-form {
+	input[type="text"] {
+		margin-bottom: 20px;
+		min-width: 415px;
+		background-color: #ffffff;
+	}
+	input[type="text"],
+	textarea {
+		padding: 20px 35px;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 17px;
+		border: none;
+		border-radius: 12px;
+		outline: none;
+	}
+	textarea {
+		margin-bottom: 30px;
+		width: 100%;
+		min-height: 132px;
+		resize: vertical;
+	}
+	::placeholder {
+		color: @darkBlue;
+		opacity: .5;
+	}
+	.btn {
+		padding: 0;
+	}
+}

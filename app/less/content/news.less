@@ -1,0 +1,135 @@
+/* NEWS */
+
+.news {
+	margin-bottom: 60px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.news-pages-section {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	font-size: 0;
+	border-bottom: 3px solid #ddf5ff;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		a {
+			position: relative;
+			padding-bottom: 24px;
+			display: block;
+			color: @darkBlue;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: 1.2px;
+			text-transform: uppercase;
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -3px;
+				display: block;
+				width: 100%;
+				height: 3px;
+				background-color: transparent;
+				transition: background-color .3s ease;
+			}
+			&:hover {
+				text-decoration: none;
+				color: @lightBlue;
+				&:after {
+					background-color: @lightBlue;
+				}
+			}
+		}
+		&.active {
+			a {
+				font-size: 24px;
+				letter-spacing: 1px;
+				&:after {
+					background-color: @lightBlue;
+				}
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+.news-pages-list {
+	margin-bottom: 15px;
+}
+
+.news-item {
+	margin-top: 60px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid #ebebeb;
+	&__date {
+		margin-bottom: 20px;
+		color: @darkBlue;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 17px;
+		opacity: .5;
+	}
+	&__title {
+		margin-bottom: 40px;
+		color: @lightBlue;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+	&__text {
+		color: #4e4e4e;
+		line-height: 26px;
+	}
+}
+
+
+.news-detail {
+	margin-bottom: 60px;
+	padding-bottom: 65px;
+	border-bottom: 1px solid #ebebeb;
+	&__date {
+		margin-bottom: 35px;
+		color: @darkBlue;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 17px;
+		opacity: .5;
+	}
+}
+
+
+.another-news {
+	&__item {
+		max-width: 633px;
+		margin-bottom: 30px;
+	}
+	&__date {
+		margin-bottom: 35px;
+		color: @darkBlue;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 17px;
+		opacity: .5;
+	}
+	&__title {
+		margin-bottom: 30px;
+		a {
+			color: @lightBlue;
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+	&__text {
+		color: #4e4e4e;
+		line-height: 26px;;
+	}
+}
