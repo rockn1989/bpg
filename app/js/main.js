@@ -120,6 +120,40 @@ $(function() {
 		self.toggleClass('open');
 	});
 
+	// Список услуг раскрытие
+	
+	var $cards = $('.card');
+	$.each($cards, function (i, el) {
+		if($(el).find('li').length > 6) {
+			$(el).find('.card__list').wrap('<div class="card__list-wrapper"></div>');
+			$(el).append('<a href="" class="show-more">Раскрыть</a>');
+		};
+	});
+
+	$('.card').on('click', 'a.show-more', function (e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		var _self = $(this),
+			$cardList = $(this).parent().find('.card__list'),
+			cardListHeight = $cardList.outerHeight(),
+			autoHeight = $cardList.css('height','auto').outerHeight(),
+			wrapper = $(this).parent().find('.card__list-wrapper');
+
+		if(!$cardList.hasClass('show')) {
+			wrapper.stop().animate({height: autoHeight+'px'}, 350, function () {
+				$cardList.addClass('show');
+				_self.text('Скрыть');
+			});	
+		} else {
+			wrapper.stop().animate({height: 190}, 350, function () {
+				$cardList.removeClass('show');
+				_self.text('Раскрыть')
+			});	
+		}
+		
+	});
+
 
 	// Открытие мобильного подменю в футере
 

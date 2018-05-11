@@ -1,5 +1,19 @@
 /* SERVICES */
 
+.services-catalog {
+	margin-bottom: 60px;
+}
+
+.services-title {
+	margin: 0 0 45px;
+	color: @darkBlue;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 36px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
 .card {
 	padding: 12px 2.8%;
 	background: url('../img/service-bg.png') center repeat;
@@ -40,6 +54,95 @@
 			color: #2c2b51;
 			font-size: 14px;
 			.line();
+		}
+	}
+}
+
+.services-section {
+	margin-bottom: 80px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	a.show-more {
+		position: relative;
+		padding-right: 25px;
+		display: inline-block;
+		padding-left: 5%;
+		font-size: 14px;
+		&:after {
+	  	content: "\e901";
+	  	position: absolute;
+	  	top: 2px;
+	  	right: 0;
+	  	transform: rotate(90deg);
+	  	color: #48a0dc;
+	  	font-weight: bold;
+	  	.icomoon();
+	  	transition: transform .3s ease;
+		}
+		&.active {
+			&:after {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}
+
+.service-list {
+	font-size: 0;
+	.card {
+		margin-bottom: 30px;
+		display: inline-block;
+		vertical-align: top;
+
+		@media @mob-w {
+			width: 100%;
+			margin-right: 0;
+		}
+		
+		@media @tablet-w {
+			margin-right: 5%;
+			width: 45%;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+
+		@media @desk-w {
+			margin-right: 2.5%;
+			width: 31.6666%;
+			&:nth-last-child(-n+3) {
+				margin-bottom: 0;
+			}
+			&:nth-child(2n) {
+				margin-right: 2.5%;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+		&__title {
+			padding: 17px 5%;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 1.2px;
+			span.small {
+				margin-top: 10px;
+				max-width: 100%;
+				color: @darkBlue;
+				font-size: 14px;
+				line-height: 17px;
+				opacity: .5;
+				text-transform: none;
+			}
+		}
+		&__list-wrapper {
+			height: 190px;
+			overflow: hidden;
+			//transition: height 3.3s ease;
+			&.show {
+
+			}
 		}
 	}
 }

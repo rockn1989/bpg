@@ -1162,6 +1162,20 @@ h3,
 
 /* SERVICES */
 
+.services-catalog {
+  margin-bottom: 60px;
+}
+
+.services-title {
+  margin: 0 0 45px;
+  color: #2c2b51;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .card {
   padding: 12px 2.8%;
   background: url('../img/service-bg.png') center repeat;
@@ -1236,6 +1250,91 @@ h3,
 
 .card__list a:hover:after {
   width: 100%;
+}
+
+.services-section {
+  margin-bottom: 80px;
+}
+
+.services-section:last-child {
+  margin-bottom: 0;
+}
+
+.services-section a.show-more {
+  position: relative;
+  padding-right: 25px;
+  display: inline-block;
+  padding-left: 5%;
+  font-size: 14px;
+}
+
+.services-section a.show-more:after {
+  content: "\e901";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #48a0dc;
+  font-weight: bold;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  -moz-transition: transform .3s ease, -moz-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
+}
+
+.services-section a.show-more.active:after {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.service-list {
+  font-size: 0;
+}
+
+.service-list .card {
+  margin-bottom: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.service-list .card__title {
+  padding: 17px 5%;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+}
+
+.service-list .card__title span.small {
+  margin-top: 10px;
+  max-width: 100%;
+  color: #2c2b51;
+  font-size: 14px;
+  line-height: 17px;
+  opacity: .5;
+  text-transform: none;
+}
+
+.service-list .card__list-wrapper {
+  height: 190px;
+  overflow: hidden;
 }
 
 /* DETAIL */
@@ -1585,6 +1684,7 @@ h3,
 
 .footer {
   padding: 75px 0;
+  border-top: 1px solid #eaeaea;
 }
 
 .footer .logo {
@@ -2145,6 +2245,11 @@ h3,
     -moz-animation: none;
     animation: none;
   }
+
+  .service-list .card {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2153,10 +2258,36 @@ h3,
     -moz-animation: none;
     animation: none;
   }
+
+  .service-list .card {
+    margin-right: 5%;
+    width: 45%;
+  }
+
+  .service-list .card:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 960px) {
   .uk-container {
     padding: 0 15px;
+  }
+
+  .service-list .card {
+    margin-right: 2.5%;
+    width: 31.6666%;
+  }
+
+  .service-list .card:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+
+  .service-list .card:nth-child(2n) {
+    margin-right: 2.5%;
+  }
+
+  .service-list .card:nth-child(3n) {
+    margin-right: 0;
   }
 }
