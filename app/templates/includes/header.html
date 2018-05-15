@@ -1,44 +1,44 @@
 {% block content %}
 	<header class="header">
-		<div class="header-desktop">
-			<div class="uk-container">
-				<div class="uk-grid">
-					<div class="uk-width-2-10">
-						<a href="/" class="logo">
-							<img src="img/logo.svg" alt="">
-						</a>
-					</div>
-					<div class="uk-width-8-10">
-						<div class="header__inner">
-							<div class="contacts">
-								<div class="contacts__inner">
-									<a href="tel:+74956211348" class="tel">+7 (495) 621-13-48</a>
-									<a href="" class="soc-links icon-whatsapp"></a>
-									<a href="" class="soc-links icon-telegram"></a>
-									<a href="" class="soc-links icon-viber-png"></a>
+		<div class="header-desktop uk-visible-large">
+			<div class="header-desktop__inner">
+				<div class="uk-container">
+					<div class="uk-grid">
+						<div class="uk-width-2-10">
+							<a href="/" class="logo">
+								<img src="img/logo.svg" alt="">
+							</a>
+						</div>
+						<div class="uk-width-8-10">
+							<div class="header__inner">
+								<div class="contacts">
+									<div class="contacts__inner">
+										<a href="tel:+74956211348" class="tel">+7 (495) 621-13-48</a>
+										<a href="" class="soc-links icon-whatsapp"></a>
+										<a href="" class="soc-links icon-telegram"></a>
+										<a href="" class="soc-links icon-viber-png"></a>
+									</div>
+									<a href="" class="soc-links icon-skype"></a>
 								</div>
-								<a href="" class="soc-links icon-skype"></a>
-							</div>
-							<div class="callback">
-								<a href="#callback-modal" class="icon-phone" data-uk-modal>Перезвоните мне</a>
-							</div>
-							<div class="address">
-								<span class="icon-flag">Москва, Архангельский пер., д.3, стр.1</span>
-							</div>
-							<div class="search">
-								<a href="" class="search__link icon-search">Поиск</a>
-								<form action="" class="search-form">
-									<input type="text">
-									<button type="submit" class="js__search-form">Найти</button>
-								</form>
+								<div class="callback">
+									<a href="#callback-modal" class="icon-phone" data-uk-modal>Перезвоните мне</a>
+								</div>
+								<div class="address">
+									<span class="icon-flag">Москва, Архангельский пер., д.3, стр.1</span>
+								</div>
+								<div class="search">
+									<a href="" class="search__link icon-search">Поиск</a>
+									<form action="" class="search-form">
+										<input type="text">
+										<button type="submit" class="js__search-form">Найти</button>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="header-mobile"></div>
-		<nav class="main-nav nav" data-uk-sticky="{top: -120, getWidthFrom: '.header'}">
+			<nav class="main-nav nav" data-uk-sticky="{top: 0, getWidthFrom: '.header'}">
 			<ul class="nav__list">
 				<li class="nav__item">
 					<a href="#" class="nav__link">О Компании</a>
@@ -74,7 +74,100 @@
 					<a href="#" class="nav__link">Контакты</a>
 				</li>
 			</ul>
-		</nav>
+		</div>
+		<div class="header-mobile uk-hidden-large">
+			<div class="uk-container">
+				<div class="uk-grid">
+					<div class="uk-width-1-2">
+						<a href="/" class="mobile-logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+					</div>
+					<div class="uk-width-1-2">
+						<ul class="mobile-menu">
+							<li><a href="#offcanvas-menu" class="icon-menu" data-uk-offcanvas></a></li>
+							<li>
+								<a href="" class="icon-mail"></a>
+							</li>
+							<li>
+								<a href="tel:+74956211348" class="icon-phone"></a>
+							</li>
+							<li><a href="" class="icon-search js__show-form"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="offcanvas-menu" class="uk-offcanvas">
+					<div class="uk-offcanvas-bar">
+							<div class="uk-panel">
+								<ul class="uk-nav">
+										<li>
+											<a href="">
+												Каталог товаров
+												<i class="js__menu-sublist-toggle"></i>
+											</a>
+											<ul class="menu-sublist">
+												<li>
+													<a href="">
+														Дизайн
+														<i class="js__menu-sublist-toggle"></i>
+													</a>
+													<ul class="menu-sublist">
+														<li><a href="">Lorem-1</a></li>
+														<li><a href="">Lorem-2</a></li>
+														<li><a href="">Lorem-3</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="">
+														Материал
+														<i class="js__menu-sublist-toggle"></i>
+													</a>
+													<ul class="menu-sublist">
+														<li><a href="">Lorem-1</a></li>
+														<li><a href="">Lorem-2</a></li>
+														<li><a href="">Lorem-3</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="">
+														Страна производитель
+														<i class="js__menu-sublist-toggle"></i>
+													</a>
+													<ul class="menu-sublist">
+														<li><a href="">Lorem-1</a></li>
+														<li><a href="">Lorem-2</a></li>
+														<li><a href="">Lorem-3</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="">
+														Размер и форма
+														<i class="js__menu-sublist-toggle"></i>
+													</a>
+													<ul class="menu-sublist">
+														<li><a href="">Lorem-1</a></li>
+														<li><a href="">Lorem-2</a></li>
+														<li><a href="">Lorem-3</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href="">О компании</a></li>
+										<li><a href="">Оплата и доставка</a></li>
+										<li><a href="">Услуги</a></li>
+										<li><a href="">Магазины</a></li>
+										<li><a href="">Отзывы</a></li>
+										<li><a href="">Контакты</a></li>
+								</ul>
+							</div>
+					</div>
+				</div>
+				<form action="" class="mobile-form" method="post">
+					<input type="text" class="mobile-search" name="mobile-search">
+					<button type="submit" class="mobile-button"></button>
+				</form>
+			</div>
+		</div>
 	</header>
 
 {% endblock %}

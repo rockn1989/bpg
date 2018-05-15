@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon/fonts/icomoon.eot?xhyd5y');
-  src: url('../fonts/icomoon/fonts/icomoon.eot?xhyd5y#iefix') format('embedded-opentype'), url('../fonts/icomoon/fonts/icomoon.ttf?xhyd5y') format('truetype'), url('../fonts/icomoon/fonts/icomoon.woff?xhyd5y') format('woff'), url('../fonts/icomoon/fonts/icomoon.svg?xhyd5y#icomoon') format('svg');
+  src: url('../fonts/icomoon/fonts/icomoon.eot?7f1ujw');
+  src: url('../fonts/icomoon/fonts/icomoon.eot?7f1ujw#iefix') format('embedded-opentype'), url('../fonts/icomoon/fonts/icomoon.ttf?7f1ujw') format('truetype'), url('../fonts/icomoon/fonts/icomoon.woff?7f1ujw') format('woff'), url('../fonts/icomoon/fonts/icomoon.svg?7f1ujw#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -126,6 +126,10 @@
 
 .icon-livejournal:before {
   content: "\e911";
+}
+
+.icon-mail:before {
+  content: "\e912";
 }
 
 body,
@@ -494,6 +498,9 @@ h3,
 
 .header-desktop {
   position: relative;
+}
+
+.header-desktop__inner {
   padding-top: 36px;
   min-height: 180px;
   background: url('../img/header-bg.png') center no-repeat;
@@ -861,6 +868,80 @@ h3,
   box-shadow: 0 20px 9px 0px rgba(147, 147, 147, 0.2);
 }
 
+.mobile-logo {
+  display: table-cell;
+  height: 40px;
+  vertical-align: bottom;
+}
+
+.mobile-logo svg {
+  height: 40px;
+}
+
+.mobile-menu {
+  margin: 0;
+  padding: 0;
+  padding-top: 0px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 0;
+  width: 100%;
+  max-width: 140px;
+  float: right;
+  text-align: right;
+}
+
+.mobile-menu li {
+  margin-left: 15px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.mobile-menu li a {
+  font-size: 20px;
+}
+
+.mobile-menu li a:before {
+  color: #2c2b51;
+}
+
+.mobile-menu li a:hover {
+  text-decoration: none;
+}
+
+.mobile-menu li:first-child {
+  margin-left: 0;
+}
+
+.mobile-tel {
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #2c2b51;
+}
+
+.mobile-tel a {
+  margin: 0 auto;
+  display: block;
+  color: #2c2b51;
+}
+
 @-webkit-keyframes showSublist {
   0% {
     display: block;
@@ -1214,6 +1295,7 @@ h3,
 
 .card__title {
   padding: 12px 5%;
+  padding-right: 35%;
   min-height: 115px;
   color: #2c2b51;
   font-size: 24px;
@@ -1234,7 +1316,6 @@ h3,
 .card__title span {
   margin-top: 5px;
   display: block;
-  max-width: 80%;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1.2px;
@@ -1344,6 +1425,7 @@ h3,
 
 .service-list .card__title {
   padding: 17px 5%;
+  padding-right: 35%;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1.2px;
@@ -2266,6 +2348,33 @@ h3,
   padding: 0;
 }
 
+.mobile-form {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  display: none;
+}
+
+.mobile-form input[type="text"] {
+  padding: 0 45px 0 5%;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #2c2b51;
+}
+
+.mobile-form .mobile-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  background: url('../img/icon-svg/search.svg') center no-repeat;
+  -webkit-background-size: 16px;
+  background-size: 16px;
+}
+
 @media (min-width: 320px) {
   html.uk-touch body [class*=uk-animation-] {
     -webkit-animation: none;
@@ -2276,6 +2385,30 @@ h3,
   .service-list .card {
     width: 100%;
     margin-right: 0;
+  }
+}
+
+@media (min-width: 480px) {
+  .mobile-menu li a {
+    font-size: 26px;
+  }
+
+  .mobile-menu li {
+    height: 20px;
+  }
+
+  .mobile-tel a {
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .mobile-tel a:first-child {
+    margin-right: 5px;
+  }
+
+  .mobile-tel a:last-child {
+    margin-left: 5px;
   }
 }
 
