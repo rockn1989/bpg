@@ -4,7 +4,12 @@
 
 .service-slider {
 	position: relative;
-	margin-bottom: 20px;
+	@media @mob-w {
+		margin-bottom: 60px;
+	}
+	@media @desk-w {
+		margin-bottom: 20px;
+	}
 	&.preload {
 		height: 320px;
 	}
@@ -16,6 +21,15 @@
 			margin: 0 -10px;
 		}
 	}
+	.slick-dots {
+		bottom: -35px;
+	}
+}
+
+.slick-dots li button:before {
+	content: '';
+	background-color: @lightBlue;
+	border-radius: 50%;
 }
 
 .slider {
@@ -52,6 +66,12 @@
 	line-height: 24px;
 	letter-spacing: 1.2px;
 	z-index: 130;
+	@media @mob-w {
+		max-width: 100%;
+	}
+	@media @desk-w {
+		max-width: 16%;
+	}
 }
 
 
@@ -63,6 +83,9 @@
 	.slider {
 		margin-top: 30px;
 		padding: 40px 14%;
+		@media @mob-w {
+			padding: 20px 0;
+		}
 		.slide {
 			&__img-wrapper {
 				height: 80px;
@@ -96,7 +119,13 @@
 	.slider {
 		position: relative;
 		margin-top: 30px;
-		padding: 0 10%;
+		@media @mob-w {
+			padding: 0;
+			padding-top: 15px;
+		}
+		@media @desk-w {
+			padding: 0 10%;
+		}
 		.slick-slide {
 			margin: 0 10px;
 		}

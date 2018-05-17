@@ -29,11 +29,27 @@
 		font-weight: 500;
 		text-transform: uppercase;
 		background-repeat: no-repeat;
-		background-size: auto;
 		background-color: #ffffff;
-		background-position: right 30px center;
 		border-radius: 12px;
 		box-shadow: 0 24px 29px -20px rgba(43, 43, 81, 0.07);
+		@media @mob-w {
+			-webkit-background-size: 0;
+			background-size: 0;
+		}
+		@media @tablet-w {
+			-webkit-background-size: 25%;
+			background-size: 25%;
+			background-position: 95% center;
+		}
+		@media @desk-w {
+			background-position: right 90% 30px;
+			background-size: 20%;
+		}
+		@media (min-width: 1200px) {
+			background-position: right 30px center;
+			-webkit-background-size: auto;
+			background-size: auto;
+		}
 		span {
 			margin-top: 5px;
 			display: block;

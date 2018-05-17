@@ -4,8 +4,18 @@
 	padding: 75px 0;
 	border-top: 1px solid #eaeaea;
 	.logo {
-		margin-top: -25px;
+		margin-top: -20px;
 		display: block;
+		@media @mob-w {
+			margin-bottom: 30px;
+		}
+		@media @tablet-w {
+			margin-top: -10px;
+			margin-bottom: 0;
+		}
+		@media (min-width: 1160px) {
+			margin-top: -20px;
+		}
 	}
 	&__list {
 		margin: 0;
@@ -29,6 +39,14 @@
 		vertical-align: top;
 		width: 50%;
 		font-size: 0;
+		@media @mob-w {
+			padding-left: 25px;
+			width: 100%;
+		}
+		@media (min-width: 1160px) {
+			padding-left: 0;
+			width: 50%;
+		}
 		.tel {
 			position: relative;
 			margin-bottom: 20px;
@@ -51,10 +69,21 @@
 			opacity: .5;
 			font-size: 14px;
 			font-weight: 500;
+			@media @mob-w {
+				padding-left: 0;
+			}
 		}
 	}
 	&__address {
 		margin-top: 35px;
+		@media @mob-w {
+			margin-top: 15px;
+			padding-left: 25px;
+		}
+		@media (min-width: 1160px) {
+			margin-top: 35px;
+			padding-left: 0;
+		}
 		span.icon-flag {
 			position: relative;
 			display: block;
@@ -68,12 +97,17 @@
 		span.text {
 			padding-left: 25px;
 			display: inline-block;
-			max-width: 60%;
 			color: #2c2b51;
 			opacity: .5;
 			font-size: 14px;
 			font-weight: 500;
 			font-family: @mainFont !important;
+			@media @mob-w {
+				max-width: 100%;
+			}
+			@media (min-width: 1160px) {
+				max-width: 60%;
+			}
 		}
 	}
 	&__soc-icons {
@@ -81,6 +115,16 @@
 		vertical-align: top;
 		width: 48%;
 		font-size: 0;
+		@media @mob-w {
+			margin-top: 15px;
+			width: 100%;
+			max-width: 160px;
+		}
+		@media (min-width: 1160px) {
+			margin-top: 0;
+			width: 48%;
+			max-width: none;
+		}
 		a {
 			&:before {
 				color:  #2c2b51;

@@ -112,8 +112,18 @@
 		position: relative;
 		padding: 60px 8.65%;
 		color: #ffffff;
-		background: url('../img/patter-blue.png') 0 0 repeat;
+		//
 		border-radius: 12px;
+		@media @mob-w {
+			background: none;
+			background-image: linear-gradient(to right, #37ADE4 0% ,  #1876CC 70%);
+		}
+		@media @desk-w {
+			background-image: none;
+			background: url('../img/patter-blue.png') 0 0 no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
 	}
 	&__title {
 		margin-bottom: 30px;
@@ -137,6 +147,14 @@
 		height: 100%;
 		&__header {
 			position: relative;
+		}
+	}
+	.main-news {
+		@media @mob-w {
+			margin-top: 30px;
+		}
+		@media @tablet-w {
+			margin-top: 0;
 		}
 	}
 	a.all {
