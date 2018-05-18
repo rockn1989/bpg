@@ -30,6 +30,8 @@
 	content: '';
 	background-color: @lightBlue;
 	border-radius: 50%;
+	width: 10px;
+	height: 10px;
 }
 
 .slider {
@@ -81,10 +83,14 @@
 	position: relative;
 	margin-bottom: 30px;
 	.slider {
+		position: relative;
 		margin-top: 30px;
 		padding: 40px 14%;
 		@media @mob-w {
 			padding: 20px 0;
+		}
+		@media (min-width: 1200px) {
+			padding: 40px 14%;
 		}
 		.slide {
 			&__img-wrapper {
@@ -108,6 +114,9 @@
 		display: inline;
 		max-height: 100%;
 	}
+	.slick-dots {
+		left: 0;
+	}
 }
 
 
@@ -123,7 +132,7 @@
 			padding: 0;
 			padding-top: 15px;
 		}
-		@media @desk-w {
+		@media (min-width: 1200px) {
 			padding: 0 10%;
 		}
 		.slick-slide {
@@ -152,6 +161,12 @@
 			height: 100%;
 			background-image: linear-gradient(to right, rgba(252, 252, 252, 0) 0%, #ffffff 100%);
 			z-index: 100;
+		}
+	}
+	.slick-dots {
+		left: 0;
+		@media @mob-w {
+			bottom: -35px;
 		}
 	}
 }

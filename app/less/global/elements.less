@@ -1,18 +1,38 @@
 /* ELEMENTS */
 
 h1, .title-h1 {
-	margin-bottom: 50px;
+	
 	color: @darkBlue;
-	font-size: 40px;
-	line-height: 46px;
+
+	@media @mob-w {
+		margin-bottom: 35px;
+		font-size: 30px;
+		line-height: 36px;
+	}
+	@media @tablet-w {
+		margin-bottom: 40px;
+		font-size: 34px;
+		line-height: 40px;
+	}
+	@media @desk-w {
+		margin-bottom: 50px;
+		font-size: 40px;
+		line-height: 46px;
+	}
 }
 
 h2, .title-h2 {
 	margin: 60px 0 40px;
 	color: @darkBlue;
-	font-size: 30px;
 	font-weight: 400;
-	line-height: 38px;
+	@media @mob-w {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	@media @tablet-w {
+		font-size: 30px;
+		line-height: 38px;
+	}
 }
 
 h3, .title-h3 {
@@ -47,6 +67,16 @@ h3, .title-h3 {
 	border-radius: 32px;
 	cursor: pointer;
 	transition: background-color .3s, color .3s ease;
+	@media @mob-w {
+		padding: 0 15px;
+		width: 100%;
+		max-width: 300px;
+	}
+	@media @tablet-w {
+		padding: 0 70px;
+		width: auto;
+		max-width: none;
+	}
 	&:hover {
 		color: #ffffff;
 		text-decoration: none;
@@ -101,7 +131,15 @@ h3, .title-h3 {
 /* BREADCRUMBS */
 
 .breadcrumbs-wrapper {
-	margin-top: -40px;
+	@media @mob-w {
+		display: none;
+	}
+	@media @tablet-w {
+		display: block;
+	}
+	@media @desk-w {
+		margin-top: -40px;
+	}
 }
 
 .breadcrumbs {

@@ -1,8 +1,8 @@
 /* DETAIL */
 
 .detail-banner {
-	margin-bottom: 80px;
-	padding: 80px 8.5% 60px;
+	margin-bottom: 40px;
+	padding: 40px 8.5% 30px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -34,6 +34,14 @@
 		background: url('../img/patter-blue.png') 0 0 no-repeat;
 		background-size: cover;
 	}
+	.detail-banner__btns-wrapper {
+		@media @mob-w {
+			text-align: center;
+		}
+		@media @tablet-w {
+			text-align: none;
+		}
+	}
 }
 
 
@@ -41,10 +49,22 @@
 	position: relative;
 	ul, ol {
 		max-width: 78%;
+		@media @mob-w {
+			max-width: 100%;
+		}
+		@media @desk-w {
+			max-width: 78%;
+		}
 	}
 	.list-img {
 		position: absolute;
 		top: 0;
 		right: 0;
+		@media @mob-w {
+			position: static;
+		}
+		@media @desk-w {
+			position: absolute;
+		}
 	}
 }

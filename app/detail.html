@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="libs/css/uikit.min.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/footable/css/footable.standalone.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!--[if lte IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -253,49 +254,49 @@
 									Оценка предприятия может понадобиться при операциях с акциями (эмиссией, выкупа долей, определения их стоимости для продажи и т.д.), для сделок (купля-продажа, вступление в наследство). Оценка стоимости предприятия бизнеса позволяет собрать информацию, которая просто необходима для повышения эффективности деятельности, реализации какого-то инвестиционного проекта, для разработки бизнес-плана. С правильным и полным отчетом об оценке, который БизнесПартнер сможет подготовить, контроль над бизнесом будет находиться в руках владельца. Ведь кто владеет информацией, тот владеет миром!
 								</p>
 								<div class="title-h2">Стоимость услуг по оценке бизнеса</div>
-								<div class="uk-overflow-container">
-									<table class="price-table">
-										<thead>
-											<tr>
-												<th>Размер компании</th>
-												<th>Стоимость услуг</th>
-												<th>Сроки</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Микро предприятия (выручка и / или активы до 30 млн. рублей)</td>
-												<td>30 000 рублей</td>
-												<td>10 раб. дней</td>
-											</tr>
-											<tr>
-												<td>Малые предприятия (выручка и / или активы от 30 до 100 млн. рублей)</td>
-												<td>60 000 рублей</td>
-												<td>15 раб. дней</td>
-											</tr>
-											<tr>
-												<td>Средние предприятия (выручка и / или активы от 100 млн. до 500 млн. рублей)</td>
-												<td>100 000 рублей</td>
-												<td>20 раб. дней</td>
-											</tr>
-											<tr>
-												<td>Крупные предприятия (выручка и / или активы от 500 до 5 000 млн. рублей)</td>
-												<td>200 000 рублей</td>
-												<td>30 раб. дней</td>
-											</tr>
-											<tr>
-												<td>Крупнешие предприятия (выручка и / или активы свыше 5 000 млн. рублей)</td>
-												<td>500 000 рублей</td>
-												<td>40 раб. дней</td>
-											</tr>
-											<tr>
-												<td>Оценка инвестиционного проекта (оценка бизнес-плана)</td>
-												<td>от 50 000 до 150 000 рублей</td>
-												<td>10 раб. дней</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+								
+								<table class="price-table js__adaptive-table">
+									<thead>
+										<tr data-expanded="true">
+											<th>Размер компании</th>
+											<th data-breakpoints="mobile">Стоимость услуг</th>
+											<th data-breakpoints="mobile">Сроки</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Микро предприятия (выручка и / или активы до 30 млн. рублей)</td>
+											<td>30 000 рублей</td>
+											<td>10 раб. дней</td>
+										</tr>
+										<tr>
+											<td>Малые предприятия (выручка и / или активы от 30 до 100 млн. рублей)</td>
+											<td>60 000 рублей</td>
+											<td>15 раб. дней</td>
+										</tr>
+										<tr>
+											<td>Средние предприятия (выручка и / или активы от 100 млн. до 500 млн. рублей)</td>
+											<td>100 000 рублей</td>
+											<td>20 раб. дней</td>
+										</tr>
+										<tr>
+											<td>Крупные предприятия (выручка и / или активы от 500 до 5 000 млн. рублей)</td>
+											<td>200 000 рублей</td>
+											<td>30 раб. дней</td>
+										</tr>
+										<tr>
+											<td>Крупнешие предприятия (выручка и / или активы свыше 5 000 млн. рублей)</td>
+											<td>500 000 рублей</td>
+											<td>40 раб. дней</td>
+										</tr>
+										<tr>
+											<td>Оценка инвестиционного проекта (оценка бизнес-плана)</td>
+											<td>от 50 000 до 150 000 рублей</td>
+											<td>10 раб. дней</td>
+										</tr>
+									</tbody>
+								</table>
+								
 								<div class="table-subtitle">
 									Заявленная базовая стоимость услуг подлежит уменьшениею (увеличению): 1) при незначительном (большом) количестве активов к переоценке, в т.ч. нематериальных и финансовых; 2) при назначении оценки, не требущей высокой достоверности результатов оценки и в др. случаях.
 								</div>
@@ -445,6 +446,7 @@
 								<li class="footer__list-item"><a href="#">Услуги</a></li>
 								<li class="footer__list-item"><a href="#">Пресс клуб</a></li>
 								<li class="footer__list-item"><a href="#">Контакты</a></li>
+								<li class="footer__list-item"><a href="#">Карта сайта</a></li>
 							</ul>
 						</div>
 						<div class="uk-width-1-1 uk-width-medium-2-3">
@@ -460,6 +462,7 @@
 				<div class="uk-width-medium-1-4 uk-padding-remove">
 					<div class="footer__contacts">
 						<a href="tel:+74956211348" class="tel icon-phone">+7 (495) 621-13-48</a>
+						<a href="mailto:info@bp-g.ru" class="tel icon-mail">info@bp-g.ru</a>
 						<a href="#callback-modal" class="callback" data-uk-modal>Перезвоните мне</a>
 					</div>
 					<div class="footer__soc-icons">
@@ -604,6 +607,7 @@
 <script src="libs/js/uikit.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
 <script src="libs/svg4everybody.min.js" defer></script>
+<script src="libs/footable/js/footable.min.js" defer></script>
 <script src="js/sliders.js" defer></script>
 <script src="js/main.js" defer></script>
 

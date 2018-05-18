@@ -167,6 +167,20 @@ $(function() {
 		siblingsList.stop().slideToggle('350');
 	});
 
+
+	// Адаптация таблиц
+
+	$('.js__adaptive-table').footable({
+		calculateWidthOverride: function() {
+			return {width: $(window).width()};
+		},
+		breakpoints: {
+			mobile: 0,
+			tablet: 720,
+			desktop: 1024
+		}
+	});
+
 	// Отключение UIKIT анимации для мобильных устройств
 
 	UIkit.on('beforeready.uk.dom', function () {
