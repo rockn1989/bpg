@@ -120,6 +120,7 @@ $(function() {
 		self.toggleClass('open');
 	});
 
+
 	// Список услуг раскрытие
 	
 	var $cards = $('.card');
@@ -152,6 +153,16 @@ $(function() {
 			});	
 		}
 		
+	});
+
+
+	// Новости. Рубрикатор
+	
+	var $newsPagesSection = $('.news-pages-section');
+
+	$('.news-toggle').on('click', function (e) {
+		e.preventDefault();
+		$newsPagesSection.slideToggle('350')
 	});
 
 

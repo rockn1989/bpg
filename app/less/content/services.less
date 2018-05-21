@@ -5,13 +5,22 @@
 }
 
 .services-title {
-	margin: 0 0 45px;
 	color: @darkBlue;
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 36px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	@media @mob-w {
+		margin-bottom: 25px;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	@media @desk-w {
+		font-size: 24px;
+		line-height: 36px;
+		margin-bottom: 30px;
+	}
 }
 
 .card {
@@ -75,7 +84,15 @@
 }
 
 .services-section {
-	margin-bottom: 80px;
+	@media @mob-w {
+		margin-bottom: 40px;
+	}
+	@media @tablet-w {
+		margin-bottom: 60px;
+	}
+	@media @desk-w {
+		margin-bottom: 80px;
+	}
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -159,6 +176,19 @@
 			//transition: height 3.3s ease;
 			&.show {
 
+			}
+		}
+	}
+}
+
+.detail-services-tabs {
+	.uk-tab {
+		.uk-dropdown {
+			a {
+				margin-bottom: 5px;
+				padding-bottom: 5px;
+				font-size: 20px;
+				text-transform: none;
 			}
 		}
 	}

@@ -14,7 +14,6 @@
 	}
 	table {
 		margin-bottom: 40px;
-		//min-width: 600px;
 		width: 100%;
 		border-collapse: collapse;
 		th, td {
@@ -102,6 +101,17 @@
 	.text-block {
 		margin-bottom: 60px;
 		.clearfix();
+		img {
+			@media @mob-w {
+				margin-bottom: 30px;
+			}
+			@media @tablet-w {
+				margin-bottom: 15px;
+			}
+			@media @desk-w {
+				margin-bottom: 0;
+			}
+		}
 	}
 	img.uk-float-left {
 		margin-right: 10%;

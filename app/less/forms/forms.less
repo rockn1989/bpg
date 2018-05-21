@@ -36,8 +36,13 @@
 .comments-form {
 	input[type="text"] {
 		margin-bottom: 20px;
-		min-width: 415px;
 		background-color: #ffffff;
+		@media @mob-w {
+			min-width: auto;
+		}
+		@media @tablet-w {
+			min-width: 415px;
+		}
 	}
 	input[type="text"],
 	textarea {

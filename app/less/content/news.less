@@ -1,9 +1,18 @@
 /* NEWS */
 
 .news {
-	margin-bottom: 60px;
-	padding-bottom: 40px;
-	border-bottom: 1px solid #ebebeb;
+	@media @mob-w {
+		margin-bottom: 20px;
+		padding-bottom: 0;
+	}
+	@media @tablet-w {
+		margin-bottom: 30px;
+		padding-bottom: 0px;
+	}
+	@media @desk-w {
+		margin-bottom: 60px;
+		padding-bottom: 20px;
+	}
 }
 
 .news-pages-section {
@@ -14,12 +23,26 @@
 	list-style: none;
 	font-size: 0;
 	border-bottom: 3px solid #ddf5ff;
+	@media @mob-w {
+		margin-top: 20px;
+		flex-wrap: wrap;
+		display: none;
+	}
+	@media @desk-w {
+		display: flex !important;
+	}
 	li {
-		display: inline-block;
 		vertical-align: top;
+		@media @mob-w {
+			display: block;
+			width: 100%;
+		}
+		@media @desk-w {
+			display: inline-block;
+			width: auto;
+		}
 		a {
 			position: relative;
-			padding-bottom: 24px;
 			display: block;
 			color: @darkBlue;
 			font-size: 16px;
@@ -45,13 +68,40 @@
 					background-color: @lightBlue;
 				}
 			}
+			@media @mob-w {
+				margin-bottom: 10px;
+				padding-bottom: 5px;
+				display: inline-block;
+				font-size: 14px;
+				line-height: 20px;
+			}
+			@media @desk-w {
+				margin-bottom: 0px;
+				padding-bottom: 24px;
+				display: block;
+				font-size: 16px;
+				line-height: 24px;
+			}
 		}
 		&.active {
 			a {
 				font-size: 24px;
 				letter-spacing: 1px;
 				&:after {
-					background-color: @lightBlue;
+					@media @mob-w {
+						background: transparent;
+						border-bottom: 2px dashed @lightBlue;
+					}
+					@media @desk-w {
+						background-color: @lightBlue;
+						border: none;
+					}
+				}
+				@media @mob-w {
+					font-size: 20px;
+				}
+				@media @desk-w {
+					font-size: 24px;
 				}
 			}
 		}
@@ -61,6 +111,29 @@
 	}
 }
 
+	a {
+		&.news-toggle {
+			position: relative;
+			display: inline-block;
+			font-size: 20px;
+			padding-left: 30px;
+			margin: 0;
+			padding-left: 30px;
+			line-height: 22px;
+			font-family: @mainFont !important;
+			color: @darkBlue;
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-family: 'icomoon' !important;
+				.icomoon();
+			}
+			&:hover,&:focus {
+				text-decoration: none;
+			}
+		}
+	}
 
 .news-pages-list {
 	margin-bottom: 15px;
@@ -89,13 +162,15 @@
 		color: #4e4e4e;
 		line-height: 26px;
 	}
+	&:first-child {
+		margin-top: 30px;
+	}
 }
 
 
 .news-detail {
 	margin-bottom: 60px;
 	padding-bottom: 65px;
-	border-bottom: 1px solid #ebebeb;
 	&__date {
 		margin-bottom: 35px;
 		color: @darkBlue;
