@@ -1,8 +1,8 @@
 /* DETAIL */
 
 .detail-banner {
-	margin-bottom: 40px;
-	padding: 40px 8.5% 30px;
+	margin-bottom: 20px;
+	padding: 30px 8.5% 20px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -28,6 +28,12 @@
 				margin-right: 0;
 			}
 		}
+		.btn--underline {
+			@media @mob-w {
+				display: inline-block;
+				width: auto;
+			}
+		}
 	}
 	&&--bottom {
 		margin: 60px 0;
@@ -39,7 +45,7 @@
 			text-align: center;
 		}
 		@media @tablet-w {
-			text-align: none;
+			text-align: left;
 		}
 	}
 }

@@ -200,7 +200,7 @@ h1,
 @media (min-width: 960px) {
   h1,
   .title-h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 40px;
     line-height: 46px;
   }
@@ -347,7 +347,7 @@ h3,
 }
 .breadcrumbs {
   margin: 0;
-  margin: 20px 0 30px;
+  margin: 10px 0;
   padding: 0;
   list-style: none;
 }
@@ -573,6 +573,11 @@ h3,
   background: url('../img/header-bg.png') center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
+}
+@media (min-width: 960px) and (max-width: 1380px) {
+  .header-desktop__inner {
+    height: 140px;
+  }
 }
 .header-mobile {
   padding-bottom: 30px;
@@ -1467,8 +1472,7 @@ h3,
 }
 @media (min-width: 320px) {
   .card__title {
-    -webkit-background-size: 0;
-    background-size: 0;
+    background-position: right center;
   }
 }
 @media (min-width: 768px) {
@@ -1657,10 +1661,13 @@ h3,
   font-size: 20px;
   text-transform: none;
 }
+.detail-services-tabs #tab-content > li {
+  padding-top: 20px;
+}
 /* DETAIL */
 .detail-banner {
-  margin-bottom: 40px;
-  padding: 40px 8.5% 30px;
+  margin-bottom: 20px;
+  padding: 30px 8.5% 20px;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -1688,6 +1695,12 @@ h3,
 .detail-banner__btns-wrapper .btn:last-child {
   margin-right: 0;
 }
+@media (min-width: 320px) {
+  .detail-banner__btns-wrapper .btn--underline {
+    display: inline-block;
+    width: auto;
+  }
+}
 .detail-banner.detail-banner--bottom {
   margin: 60px 0;
   background: url('../img/patter-blue.png') 0 0 no-repeat;
@@ -1701,7 +1714,7 @@ h3,
 }
 @media (min-width: 768px) {
   .detail-banner .detail-banner__btns-wrapper {
-    text-align: none;
+    text-align: left;
   }
 }
 .list-wrapper {
